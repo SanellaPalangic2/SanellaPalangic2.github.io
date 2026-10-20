@@ -144,7 +144,7 @@
     <h1 class="name">Sanella Palangic</h1>
     <p class="role">Systems Administrator &amp; AI Developer at E-Paralegals. Data Science M.S. student at Montclair State.</p>
     <p class="thesis">I build AI tools for real workflows, and I don’t trust them until I’ve tested them.</p>
-    <p class="intro">I build with Claude Code and Cursor every day. At work I built our help desk platform, now used by 25+ employees, with an assistant that answers 35% of staff questions before anyone opens a ticket. Below are three projects, each with what I tested and what I found.</p>
+    <p class="intro">I build with Claude Code and Cursor every day. At work I built our help desk platform, now used by 25+ employees, with an assistant that answers 35% of staff questions before anyone opens a ticket. Below are five projects, each with what I tested and what I found.</p>
     <ul class="actions">
       <li><a class="btn primary" href="Sanella_Palangic_Resume.pdf" target="_blank" rel="noopener">Download resume (PDF)</a></li>
       <li><a class="btn" href="https://www.linkedin.com/in/sanella-palangic" target="_blank" rel="noopener">LinkedIn</a></li>
@@ -176,6 +176,22 @@
         </div>
       </article>
 
+      <article class="project" aria-labelledby="p-triage">
+        <h3 id="p-triage">Triage Desk: telehealth message triage</h3>
+        <p class="stack">PHP, Laravel, SQLite, Anthropic Claude API, Docker</p>
+        <p>A demo for a telehealth clinic that sorts incoming patient messages by urgency and drafts replies, built on synthetic data. The AI only drafts; a person approves every reply.</p>
+        <ul class="record" aria-label="What I tested">
+          <li><strong>Guarded:</strong> fixed rules catch emergency red flags before the AI ever runs, and names, birth dates, phone numbers, and emails are redacted before any text reaches the AI.</li>
+          <li class="found"><strong>Found:</strong> my first evaluation caught only 67% of emergency red flags.</li>
+          <li><strong>Fixed:</strong> added rules until it caught 7 of 7.</li>
+          <li><strong>Checked:</strong> 96.7% category accuracy, 0 of 9 prompt-injection attacks got through, and 389 automated tests.</li>
+        </ul>
+        <div class="links">
+          <a href="https://triage-desk-9set.onrender.com/" target="_blank" rel="noopener">Open live demo</a>
+          <a href="https://github.com/SanellaPalangic2/Telehealth-Message-Triage-Demo" target="_blank" rel="noopener">View code on GitHub</a>
+        </div>
+      </article>
+
       <article class="project" aria-labelledby="p2">
         <h3 id="p2">NYC 311 service request analysis</h3>
         <p class="stack">Python, PostgreSQL, SQL, pandas, scikit-learn, Streamlit</p>
@@ -203,6 +219,21 @@
         <div class="links">
           <a href="https://it-ticket-classifier-2xjl.onrender.com/" target="_blank" rel="noopener">Open live demo</a>
           <a href="https://github.com/SanellaPalangic2/IT-ticket-classifier" target="_blank" rel="noopener">View code on GitHub</a>
+        </div>
+      </article>
+
+      <article class="project" aria-labelledby="p-algebra">
+        <h3 id="p-algebra">Algebra Quest: AI algebra tutor</h3>
+        <p class="stack">Python, Flask, Anthropic Claude API, HTML/CSS</p>
+        <p>A kid-friendly algebra tutor for middle schoolers, with 7 levels from variables to inequalities, AI-written lessons, and practice problems with fresh numbers every time.</p>
+        <ul class="record" aria-label="What I tested">
+          <li><strong>Guarded:</strong> the Algebot chat asks guiding questions instead of handing out answers, stays on topic, and never asks for personal information.</li>
+          <li><strong>Checked:</strong> answers are checked on the server, so students can’t skip levels by peeking at the page, with automated tests for answer checking and level unlocking.</li>
+          <li><strong>Designed:</strong> no accounts or database, the API key stays on the server, and it still works with built-in lessons if the AI is unavailable.</li>
+        </ul>
+        <div class="links">
+          <a href="https://algebra-quest.onrender.com/" target="_blank" rel="noopener">Open live demo</a>
+          <a href="https://github.com/SanellaPalangic2/Algebra-AI-Chatbot-" target="_blank" rel="noopener">View code on GitHub</a>
         </div>
       </article>
     </div>
