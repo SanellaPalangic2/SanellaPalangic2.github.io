@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sanella Palangic</title>
+<meta name="description" content="Sanella Palangic builds AI tools for real workflows and tests them before trusting them. Data Science M.S. student at Montclair State.">
+<meta property="og:title" content="Sanella Palangic">
+<meta property="og:description" content="AI tools for real workflows, tested before they're trusted.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sanellapalangic2.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2316213A'/%3E%3Cpath d='M18 33l9 9 19-20' fill='none' stroke='%2363C79B' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Serif:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F3F5F7;
+    --card: #FFFFFF;
+    --ink: #16213A;
+    --muted: #556074;
+    --rule: #D6DCE4;
+    --pass: #23734F;
+    --pass-soft: #E3F1EA;
+    --fail: #A6392F;
+    --fail-soft: #F7E7E4;
+    --link: #1F4FA8;
+    --measure: 44rem;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 400 1.0625rem/1.6 "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  a { color: var(--link); text-underline-offset: 0.18em; }
+  a:hover { color: var(--ink); }
+  :focus-visible { outline: 3px solid var(--link); outline-offset: 3px; border-radius: 4px; }
+  .wrap { max-width: var(--measure); margin: 0 auto; padding: 0 1.25rem; }
+
+  /* Hero */
+  header.hero { padding: 4.5rem 0 2.75rem; }
+  .name {
+    font-family: "IBM Plex Serif", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(2.4rem, 7vw, 3.6rem);
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.6rem;
+  }
+  .role { color: var(--muted); font-size: 1.05rem; margin: 0 0 1.75rem; }
+  .thesis {
+    font-family: "IBM Plex Serif", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(1.35rem, 3.6vw, 1.75rem);
+    line-height: 1.35;
+    margin: 0 0 1.25rem;
+    max-width: 36rem;
+  }
+  .intro { margin: 0 0 2rem; max-width: 38rem; }
+  .actions { display: flex; flex-wrap: wrap; gap: 0.6rem; padding: 0; margin: 0; list-style: none; }
+  .btn {
+    display: inline-block;
+    padding: 0.62rem 1.05rem;
+    border: 1.5px solid var(--ink);
+    border-radius: 8px;
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.98rem;
+    background: transparent;
+  }
+  .btn:hover { background: var(--ink); color: var(--paper); }
+  .btn.primary { background: var(--ink); color: var(--paper); }
+  .btn.primary:hover { background: #24345A; }
+
+  /* Sections */
+  section { padding: 2.5rem 0; border-top: 1px solid var(--rule); }
+  h2 {
+    font-family: "IBM Plex Serif", Georgia, serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin: 0 0 0.4rem;
+  }
+  .section-note { color: var(--muted); margin: 0 0 1.75rem; }
+
+  /* Projects */
+  .project {
+    background: var(--card);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 1.6rem 1.5rem 1.4rem;
+    margin: 0 0 1.4rem;
+  }
+  .project h3 { font-size: 1.25rem; font-weight: 600; margin: 0 0 0.2rem; line-height: 1.3; }
+  .stack { color: var(--muted); font-size: 0.92rem; margin: 0 0 0.9rem; }
+  .project p { margin: 0 0 1rem; }
+
+  /* The verification record: the one memorable element */
+  .record { list-style: none; margin: 0 0 1.2rem; padding: 0; border-left: 2px solid var(--rule); }
+  .record li { position: relative; padding: 0.15rem 0 0.7rem 1.6rem; }
+  .record li:last-child { padding-bottom: 0.1rem; }
+  .record li::before {
+    content: "";
+    position: absolute; left: -0.62rem; top: 0.32rem;
+    width: 1.1rem; height: 1.1rem; border-radius: 50%;
+    background: var(--pass-soft) no-repeat center / 0.7rem
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8.5l3 3 7-7' fill='none' stroke='%2323734F' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    box-shadow: 0 0 0 2px var(--card);
+  }
+  .record li.found::before {
+    background-color: var(--fail-soft);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8 3.5v5.5M8 12.3v.2' fill='none' stroke='%23A6392F' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E");
+  }
+  .record strong { font-weight: 600; }
+  .links { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; align-items: baseline; }
+  .links a { font-weight: 500; }
+  .wake { color: var(--muted); font-size: 0.88rem; }
+
+  /* Experience */
+  .job { margin: 0 0 1.4rem; }
+  .job h3 { font-size: 1.08rem; font-weight: 600; margin: 0; }
+  .job .meta { color: var(--muted); font-size: 0.95rem; margin: 0 0 0.4rem; }
+  .job p { margin: 0; }
+
+  /* Footer */
+  footer { border-top: 1px solid var(--rule); padding: 2rem 0 3rem; color: var(--muted); }
+  footer ul { list-style: none; padding: 0; margin: 0 0 0.8rem; display: flex; flex-wrap: wrap; gap: 0.4rem 1.4rem; }
+  footer a { font-weight: 500; }
+
+  @media (max-width: 520px) {
+    header.hero { padding-top: 3rem; }
+    .project { padding: 1.3rem 1.1rem 1.2rem; }
+    .btn { padding: 0.58rem 0.9rem; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <h1 class="name">Sanella Palangic</h1>
+    <p class="role">Systems Administrator &amp; AI Developer at E-Paralegals. Data Science M.S. student at Montclair State.</p>
+    <p class="thesis">I build AI tools for real workflows, and I don’t trust them until I’ve tested them.</p>
+    <p class="intro">I build with Claude Code and Cursor every day. At work I built our help desk platform, now used by 25+ employees, with an assistant that answers 35% of staff questions before anyone opens a ticket. Below are three projects, each with what I tested and what I found.</p>
+    <ul class="actions">
+      <li><a class="btn primary" href="Sanella_Palangic_Resume.pdf" target="_blank" rel="noopener">Download resume (PDF)</a></li>
+      <li><a class="btn" href="https://www.linkedin.com/in/sanella-palangic" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a class="btn" href="https://github.com/SanellaPalangic2" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a class="btn" href="mailto:sanella.palangic@gmail.com">Email me</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section id="projects" aria-labelledby="projects-title">
+    <div class="wrap">
+      <h2 id="projects-title">Projects</h2>
+      <p class="section-note">The live demos run on a free server that sleeps when no one is using it, so the first visit can take up to a minute to load.</p>
+
+      <article class="project" aria-labelledby="p1">
+        <h3 id="p1">TaskFlow AI, deployed as OpsPilot</h3>
+        <p class="stack">Python, Flask, SQLite, Anthropic Claude API, Pydantic, JavaScript</p>
+        <p>An AI operations tool built after I saw how much time a solar company was losing to manual work. It finds which workflow steps AI can automate and which still need a person, and a built-in assistant answers questions from the company’s own data. A tailored version, OpsPilot, runs on that company’s database.</p>
+        <ul class="record" aria-label="What I tested">
+          <li class="found"><strong>Found:</strong> on real data, the model gave confident answers that were wrong, pulled from outside the company’s data.</li>
+          <li><strong>Fixed:</strong> business rules keep it to the database and company documents. It now asks for more information or says it doesn’t know.</li>
+          <li><strong>Checked:</strong> a 40-case test suite reruns on every change. Accuracy went from 69% to 82%.</li>
+          <li><strong>Guarded:</strong> a person approves every change, and legal, money, and urgent issues go straight to human review.</li>
+        </ul>
+        <div class="links">
+          <a href="https://opspilot-ai-3rio.onrender.com/" target="_blank" rel="noopener">Open live demo</a>
+          <a href="https://github.com/SanellaPalangic2/TaskFlow-AI" target="_blank" rel="noopener">View code on GitHub</a>
+        </div>
+      </article>
+
+      <article class="project" aria-labelledby="p2">
+        <h3 id="p2">NYC 311 service request analysis</h3>
+        <p class="stack">Python, PostgreSQL, SQL, pandas, scikit-learn, Streamlit</p>
+        <p>An analysis of 3.66 million public NYC 311 requests: how long each city agency takes to close them, and which requests will close within a week.</p>
+        <ul class="record" aria-label="What I tested">
+          <li><strong>Loaded:</strong> a resumable pipeline pulls the data day by day, retries failures, and loads all 3.66M rows into PostgreSQL in 94 seconds.</li>
+          <li><strong>Checked:</strong> row counts are reconciled at every stage, and the dashboard is validated against SQL with 35 tests.</li>
+          <li><strong>Predicted:</strong> a model trained only on past data predicts 7-day closure at 0.956 ROC AUC, against a 0.50 baseline.</li>
+        </ul>
+        <div class="links">
+          <a href="https://nyc-311-dashboard-y8su.onrender.com/" target="_blank" rel="noopener">Open live demo</a>
+          <a href="https://github.com/SanellaPalangic2/nyc-311-analysis" target="_blank" rel="noopener">View code on GitHub</a>
+        </div>
+      </article>
+
+      <article class="project" aria-labelledby="p3">
+        <h3 id="p3">IT support ticket classifier</h3>
+        <p class="stack">Python, scikit-learn, pandas, NumPy, Streamlit</p>
+        <p>A model that reads an IT support ticket and routes it to one of 8 categories, trained on 47,837 labeled tickets.</p>
+        <ul class="record" aria-label="What I tested">
+          <li class="found"><strong>Found:</strong> 1,639 clusters of near-duplicate tickets that would have leaked answers from training into testing.</li>
+          <li><strong>Fixed:</strong> grouped duplicates together so the test set is truly unseen.</li>
+          <li><strong>Checked:</strong> 0.865 macro F1 on 6,959 held-out tickets, at least 0.84 recall in every category, and 24 automated tests.</li>
+        </ul>
+        <div class="links">
+          <a href="https://it-ticket-classifier-2xjl.onrender.com/" target="_blank" rel="noopener">Open live demo</a>
+          <a href="https://github.com/SanellaPalangic2/IT-ticket-classifier" target="_blank" rel="noopener">View code on GitHub</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="experience" aria-labelledby="experience-title">
+    <div class="wrap">
+      <h2 id="experience-title">Experience</h2>
+      <div class="job">
+        <h3>Systems Administrator &amp; AI Developer, E-Paralegals LLC</h3>
+        <p class="meta">Oradell, NJ, January 2022 to present</p>
+        <p>Built the firm’s help desk platform (React, Python, PostgreSQL, Azure, Entra ID single sign-on) with Claude Code and Cursor. The IT team accepts 84% of its AI ticket suggestions, and routing automation cut ticket assignment time by 30%.</p>
+      </div>
+      <div class="job">
+        <h3>Freelance Web Developer</h3>
+        <p class="meta">June 2022 to present</p>
+        <p>Websites, client portals, and Shopify integrations for 7 small-business clients.</p>
+      </div>
+      <div class="job">
+        <h3>Education</h3>
+        <p class="meta">Montclair State University, M.S. in Data Science, expected May 2028</p>
+        <p class="meta">Fairleigh Dickinson University, B.S. in Computer Science with a Minor in Mathematics, May 2026</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <ul>
+      <li><a href="mailto:sanella.palangic@gmail.com">sanella.palangic@gmail.com</a></li>
+      <li><a href="https://www.linkedin.com/in/sanella-palangic" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://github.com/SanellaPalangic2" target="_blank" rel="noopener">GitHub</a></li>
+      <li><a href="Sanella_Palangic_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
+    </ul>
+    <p>Oradell, New Jersey</p>
+  </div>
+</footer>
+</body>
+</html>
