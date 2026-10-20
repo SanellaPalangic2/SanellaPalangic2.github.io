@@ -154,7 +154,7 @@
         <a class="btn primary" href="Sanella_Palangic_Resume.pdf" download>Download resume (PDF)</a>
         <a class="btn" href="https://www.linkedin.com/in/sanella-palangic" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn" href="https://github.com/SanellaPalangic2" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn" href="mailto:sanella.palangic@gmail.com">Email me</a>
+        <a class="btn" id="email-btn" href="mailto:sanella.palangic@gmail.com" title="sanella.palangic@gmail.com">Email me</a>
       </div>
     </div>
   </div>
@@ -306,5 +306,17 @@
   </div>
 </footer>
 
+<script>
+  (function () {
+    var b = document.getElementById('email-btn');
+    if (!b) return;
+    var addr = 'sanella.palangic@gmail.com';
+    b.addEventListener('click', function () {
+      try { if (navigator.clipboard) navigator.clipboard.writeText(addr); } catch (e) {}
+      b.textContent = 'Copied: ' + addr;
+      setTimeout(function () { b.textContent = 'Email me'; }, 4000);
+    });
+  })();
+</script>
 </body>
 </html>
