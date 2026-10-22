@@ -116,6 +116,7 @@
   .role-title { font-weight: 600; margin: 0; }
   .role-title span { font-weight: 400; color: var(--muted); }
   .honors { color: var(--slate); margin: 4px 0 0; }
+  .group { font-size: 0.82rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin: 14px 0 6px; }
 
   /* Skills */
   dl.skills { margin: 0; display: grid; grid-template-columns: 1fr; gap: 4px 24px; }
@@ -251,18 +252,36 @@
     <div class="entry">
       <p class="org">E-Paralegals LLC, Oradell, NJ</p>
       <div class="entry-head"><p class="role-title">Systems Administrator &amp; AI Developer</p><span class="when">Jan 2022 – Present</span></div>
+      <p class="group">AI and software development</p>
       <ul>
-        <li>Built the firm’s AI help desk platform (React, Python, PostgreSQL, Microsoft Azure), used by 25+ employees; the IT team accepts 84% of its AI suggestions</li>
+        <li>Designed, built, and deployed the firm’s AI help desk platform (React, Flask REST API, PostgreSQL, Microsoft Azure) with Microsoft Entra ID single sign-on, used by 25+ employees for ticket tracking, prioritization, and asset management</li>
+        <li>Integrated the Anthropic Claude API to classify tickets by category and priority and suggest troubleshooting steps; IT staff accepted 84% of AI suggestions across 180 tickets</li>
+        <li>Deployed a self-service AI assistant grounded in approved IT documentation that answered 311 employee questions, resolving 35% without a ticket, with confidential client and immigration case records kept out of scope</li>
         <li>Automate composition of complex legal filings and recurring tasks with Claude AI, Python, and parallelized Google Colab scripts</li>
-        <li>Maintain network security across the office network and connected devices</li>
-        <li>Run cloud backup of firm data through Dropbox</li>
-        <li>Build and maintain Airtable bases that track projects and workflow status</li>
-        <li>Synchronize accounting data with QuickBooks Online</li>
-        <li>Support FluentCRM email campaigns and their tracking in Amazon Web Services</li>
-        <li>User support and troubleshooting for hardware, software, and accounts</li>
-        <li>Imaging, setup, and security configuration of laptops and desktops</li>
-        <li>Microsoft 365 support (Outlook, Teams, OneDrive) and network connectivity (Wi-Fi, VPN, printers)</li>
-        <li>Internal IT knowledge base of common issues and step-by-step fixes</li>
+      </ul>
+      <p class="group">Data and reporting</p>
+      <ul>
+        <li>Built Power BI reports and a Recharts dashboard on ticket volume, resolution time, and issue trends; identified slow assignment as the bottleneck and automated routing, cutting average assignment time 30% (from 10 to 7 hours)</li>
+      </ul>
+      <p class="group">IT systems and support</p>
+      <ul>
+        <li>Provide end-user support for 25+ employees across hardware, software, account, and access issues, on site and remotely through AnyDesk</li>
+        <li>Manage onboarding and offboarding in Microsoft Entra ID: accounts, password resets, and multi-factor authentication</li>
+        <li>Image, configure, and deploy 40+ Windows laptops and desktops with required software and security settings</li>
+        <li>Write PowerShell scripts to deploy software, map network drives, and automate new-user setup</li>
+        <li>Support Microsoft 365 (Outlook, Teams, OneDrive) and network connectivity (Wi-Fi, VPN, printers), and maintain network security across the office</li>
+        <li>Apply Windows updates and maintain file and email backups, including cloud backup of firm data through Dropbox</li>
+        <li>Maintain business systems: Airtable bases for project tracking, QuickBooks Online accounting sync, and FluentCRM email campaigns tracked in Amazon Web Services</li>
+        <li>Write troubleshooting guides for the internal IT knowledge base and train staff on new tools</li>
+      </ul>
+    </div>
+    <div class="entry">
+      <p class="org">Self-Employed, Oradell, NJ</p>
+      <div class="entry-head"><p class="role-title">Freelance Web Developer</p><span class="when">Jun 2022 – Present</span></div>
+      <ul>
+        <li>Developed responsive websites and web apps for 7 clients using React, JavaScript, HTML, and CSS, with REST API integrations</li>
+        <li>Built client analytics tools in Python, pandas, and SQL, including e-commerce revenue analysis and website traffic and conversion dashboards</li>
+        <li>Gathered requirements, shipped iterative updates, and debugged production issues through handoff</li>
       </ul>
     </div>
   </section>
