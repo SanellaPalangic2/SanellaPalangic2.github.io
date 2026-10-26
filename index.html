@@ -219,6 +219,25 @@
     </article>
 
     <article class="project">
+      <h3>Cross-Asset Momentum &amp; Trend Research</h3>
+      <p class="sub">Backtesting trading signals across stocks, bonds, and commodities on an untouched holdout</p>
+      <p>A research pipeline for 24 ETFs across equities, Treasuries, credit, and commodities, plus FRED Treasury yields (2007–2026, about 119K rows), stored in DuckDB. Ten data-quality rules flag bad rows instead of deleting them, and all 247 extreme returns were traced to real market events. Momentum and volatility-scaled trend signals were backtested with next-day execution, 10 bp costs, and Sharpe ratios over the T-bill rate, with the last 3 years held out untouched.</p>
+      <figure class="result" aria-label="Worst drawdown from 2008 to 2023: trend following lost 14 percent at its worst, equal weight lost 41 percent">
+        <p class="result-title">Worst drawdown, 2008–2023 (smaller is better)</p>
+        <div class="bar-row"><span class="bar-label">Equal weight</span><span class="bar-track" aria-hidden="true"><span class="bar-fill base" style="width:41%;display:block"></span></span><span class="bar-value">−41%</span></div>
+        <div class="bar-row"><span class="bar-label">Trend</span><span class="bar-track" aria-hidden="true"><span class="bar-fill" style="width:14%;display:block"></span></span><span class="bar-value">−14%</span></div>
+        <p class="result-note">Trend was flat through the 2008 crisis, while equal weight lost 29%.</p>
+      </figure>
+      <ul>
+        <li>Trend held up out of sample (Sharpe 0.56 vs. 0.63 in-sample), though it trailed equal weight in the holdout’s bull market</li>
+        <li>Momentum failed out of sample (IC t-stat 0.37), and a walk-forward gradient boosting model did not significantly beat it (p = 0.37), both reported as results</li>
+        <li>Tests that scramble future data prove no signal looks ahead, part of an 81-test pytest suite</li>
+      </ul>
+      <p class="stack"><strong>Built with</strong> Python, DuckDB, pandas, scikit-learn, pytest, Streamlit</p>
+      <p class="links"><a href="https://cross-asset-momentum.onrender.com/" target="_blank" rel="noopener">Open live demo</a><a href="https://github.com/SanellaPalangic2/cross-asset-momentum" target="_blank" rel="noopener">View code on GitHub</a></p>
+    </article>
+
+    <article class="project">
       <h3>IT Support Ticket Classifier</h3>
       <p class="sub">Routing help-desk tickets to the right team automatically</p>
       <p>An NLP classifier (TF-IDF with logistic regression) that routes IT tickets across 8 categories, trained on 47,837 labeled tickets. Near-duplicate clustering and group-aware splits prevent leakage, and the app is deployed on Render with 24 pytest tests.</p>
