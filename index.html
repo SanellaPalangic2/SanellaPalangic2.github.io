@@ -205,6 +205,23 @@
     </article>
 
     <article class="project">
+      <h3>Mobile Contacts App</h3>
+      <p class="sub">An Android contact manager with live search and local storage</p>
+      <p>An Android app written in Java where users add, view, edit, delete, and search contacts. Everything is stored in a local SQLite database, so contacts persist across app restarts.</p>
+      <figure class="result" aria-label="Demo of the app: adding a contact, searching, viewing details, editing, and deleting">
+        <img src="https://raw.githubusercontent.com/SanellaPalangic2/Mobile-Contacts-App/main/docs/demo.gif" alt="Demo: adding a contact, searching, viewing details, editing, and deleting" width="220" loading="lazy" style="display:block;margin:0 auto;width:220px;max-width:100%;height:auto;border-radius:12px">
+        <p class="result-note" style="text-align:center">Add, search, view, edit, and delete in the running app.</p>
+      </figure>
+      <ul>
+        <li>Create, read, update, and delete on a SQLite table through SQLiteOpenHelper</li>
+        <li>Live search that filters by name or phone number as you type, using a RecyclerView with a custom adapter</li>
+        <li>Input validation, a delete confirmation, and the Activity Result API to refresh the list after edits</li>
+      </ul>
+      <p class="stack"><strong>Built with</strong> Java, Android Studio, SQLite, Material Design</p>
+      <p class="links"><a href="https://github.com/SanellaPalangic2/Mobile-Contacts-App" target="_blank" rel="noopener">View code on GitHub</a></p>
+    </article>
+
+    <article class="project">
       <h3>NYC 311 Service Request Analysis</h3>
       <p class="sub">Predicting which city service requests close within 7 days</p>
       <p>A pipeline that loads 3.66 million NYC 311 requests into PostgreSQL and trains a leakage-free gradient boosting model on a time-based split, with survival analysis, statistical testing, and a Streamlit dashboard validated against SQL.</p>
